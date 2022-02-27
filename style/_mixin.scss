@@ -1,0 +1,19 @@
+
+@mixin font-face($name, $src, $weight: normal, $style: normal) {
+	
+	@font-face {
+		font-family: $name;
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+@mixin for-width($size) {
+	@media(min-width: map-get($site-breakpoints,$size)) { @content; }	
+}
+
+
+@mixin for-width-down($size) {
+	@media(max-width: map-get($site-breakpoints,$size)) { @content; }	
+}

@@ -1,0 +1,159 @@
+@import 'mixin';
+@import 'fonts';
+@import 'config';
+
+@include site-fonts();
+
+body {
+    font-size: $body-font-size;
+    font-family: $body-font-family;
+    color: $body-font-color;
+    overflow-x: hidden;
+    background: $body-background;
+    box-sizing: border-box;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+}
+
+.large-container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.c-all-link {
+    color: $color-orange;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    transform: scale(1);
+    transition: all 0.5s;
+    position: relative;
+    padding-right: 15px;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &::after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        content: '';
+        background-image: url('/images/arrow-next.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 10px;
+        width: 10px;
+    }
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+ 
+}
+
+p,
+.p,
+.c-p {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+h1,
+.h1,
+.c-h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include for-width('mobile2') {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    @include for-width('middle') {
+        font-size: 1.8rem;
+        line-height: 2.15rem;
+    }
+
+    @include for-width('large') {
+        font-size: 2.4rem;
+        line-height: 2.95rem;
+    }
+}
+
+h2,
+.h2,
+.c-h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 700;
+
+    @include for-width('mobile') {
+        line-height: 34px;
+        font-size: 28px;
+    }
+}
+
+h3,
+.h3,
+.c-h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 27px;
+    font-size: 22px;
+    font-weight: 700;
+
+    @include for-width('mobile') {
+        line-height: 30px;
+        font-size: 24px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.c-orange-btn {
+    color: $color-orange;
+    border: 1px solid rgba($color-orange, 60%);
+    transition: 0.3s linear;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    max-width: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:hover,
+    &.active {
+        background-color: $color-orange;
+        color: $color-white;
+        box-shadow: 0 20px 25px #ffe3bb33;
+    }
+}

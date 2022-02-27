@@ -1,0 +1,24 @@
+
+//Цвета, по возможности желательно придерживаться этого формата
+$color-white: #fff;
+$color-black: #000;
+$color-orange: #caab7e;
+$color-dark-blue: #081538;
+$color-dark-blue2: #131a4b;
+
+$site-breakpoints: (
+	min: 374px,
+	mobile: 450px,
+	mobile2: 767px,
+	mobile3: 860px,
+	middle: 1040px,
+	middle2: 1280px,
+	large: 1600px,
+	full: 1920px,
+);
+
+$header-height: 6rem;
+$body-background: $color-white; // b-layout
+$body-font-color: $color-dark-blue;
+$body-font-family: 'Montserrat', 'Roboto', 'Helvetica', sans-serif;
+$body-font-size: 20px;

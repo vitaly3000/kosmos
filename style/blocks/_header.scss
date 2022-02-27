@@ -1,0 +1,542 @@
+
+$block-name: 'header';
+
+.#{$block-name} {
+	transition: height 0.3s;
+	height: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    @media(min-width: map-get($site-breakpoints, 'mobile3')) {
+        height: $header-height;
+    }
+
+	&--scroll {
+        box-shadow: 1px -25px 50px rgba(#000, 0.5);
+		background-color: $color-white;
+        height: 4rem;
+
+        
+        .#{$block-name}__logo {
+			background: $color-orange;
+		}
+
+        .#{$block-name}__content-inner {
+			height: 4rem;
+		}
+
+		.#{$block-name}__menu-items {
+			height: 4rem;
+		}
+
+		.#{$block-name}__menu-item {
+			color: $color-dark-blue;
+		}
+
+
+		.#{$block-name}__menu-hamburger {
+			span {
+				transition: background 0s;
+				background: $color-dark-blue;
+
+				&::before,
+				&::after {
+					background: $color-dark-blue;
+				}
+			}
+
+			&--active {
+				span {
+					background: none;
+				}
+			}
+		}
+	}
+
+	&__logo {
+        width: 40px;
+		height: 40px;
+		display: inline-block;
+		-webkit-mask-position: center;
+		mask-position: center;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		-webkit-mask-size: contain;
+		background: white;
+	}
+
+	&__content-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 4rem;
+		position: relative;
+
+		@media(min-width: map-get($site-breakpoints, 'mobile3')) {
+            height: $header-height;
+        }
+	}
+
+	&__menu-items {
+		display: none;
+		margin: 0 20px;
+		position: relative;
+		height: $header-height;
+		align-items: center;
+
+        @media(min-width: map-get($site-breakpoints, 'middle')) {
+            display: flex;
+        }
+	}
+
+	&__menu-item-wrapper {
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+
+		position: relative;
+	}
+
+	&__menu-item {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		color: $color-white;
+		padding-bottom: 19px;
+		margin-top: 25px;
+        margin-right: 40px;
+
+		&:hover {
+			color: $color-orange;
+			position: relative;
+
+			&::after {
+				position: absolute;
+				content: '';
+				height: 2px;
+				width: 100%;
+				bottom: 0;
+				background-color: $color-orange;
+				left: 0;
+			}
+		}
+	}
+
+	&__menu-item-content {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: calc(100% + 25px);
+		background-color: #fff;
+		width: 100%;
+		padding-top: 25px;
+		z-index: 100;
+		min-width: 300px;
+
+		&.active {
+			display: block;
+		}
+
+		&::before {
+			content: '';
+			background: white;
+			position: absolute;
+			height: 100%;
+			width: 100vw;
+			top: 0;
+			z-index: -10;
+			left: 0;
+		}
+
+		&::after {
+			content: '';
+			background: white;
+			position: absolute;
+			height: 100%;
+			top: 0;
+			width: 100vw;
+			z-index: -10;
+			right: 0;
+		}
+	}
+
+	&__menu-item-content-item {
+		display: block;
+		font-size: 16px;
+		line-height: 20px;
+		margin-bottom: 30px;
+
+		&:hover {
+			color: $color-orange;
+		}
+	}
+
+	&__mobile-menu {
+		background-color: $color-white;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		display: none;
+		padding-bottom: 50px;
+
+		&.active {
+			display: block;
+
+            @media(min-width: map-get($site-breakpoints, 'middle')) {
+                display: none;
+            }
+		}
+
+		&::before {
+			content: '';
+			background: white;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: -100%;
+		}
+
+		&::after {
+			content: '';
+			background: white;
+			position: absolute;
+			height: 100%;
+			top: 0;
+			width: 100%;
+			right: -100%;
+		}
+	}
+
+	&__mobile-menu-inner {
+		max-height: 70vh;
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&__mobile-menu-item-wrapper {
+		border-bottom: 1px solid #eaecf2;
+		padding-top: 1rem;
+		font-size: 0.8rem;
+		cursor: pointer;
+		font-weight: 500;
+	}
+
+	&__mobile-menu-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 1rem;
+
+		&.active {
+			.#{$block-name}__mobile-menu-item-icon {
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	&__mobile-menu-item-content {
+		display: none;
+		padding-bottom: 1rem;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&__mobile-menu-item-link {
+		display: block;
+		margin-bottom: 0.5rem;
+		font-weight: 400;
+
+		&.active,
+		&:hover {
+			color: $color-orange;
+		}
+	}
+
+	&__mobile-menu-icons {
+		display: flex;
+		margin: 2rem 0;
+		justify-content: center;
+
+        @media(min-width: map-get($site-breakpoints, 'mobile2')) {
+            justify-content: start;
+        }
+	}
+
+	&__mobile-icon {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		margin-left: 1rem;
+		margin-right: 1rem;
+
+		svg {
+			path {
+				fill: $color-dark-blue2;
+			}
+
+			circle {
+				stroke: $color-dark-blue2;
+			}
+		}
+
+		&--search {
+			margin-right: 1rem;
+		}
+
+		&--lang {
+			position: relative;
+
+			a {
+				color: $color-dark-blue2;
+				font-size: 14px;
+				font-weight: 500;
+
+				&:hover {
+					color: $color-orange;
+
+					&::after {
+						background-color: $color-orange;
+					}
+				}
+
+				&::after {
+					position: absolute;
+					content: '';
+					height: 2px;
+					width: 125%;
+					bottom: 0;
+					background-color: $color-dark-blue2;
+					left: -15%;
+					border-radius: 1px;
+					transform: scale(0.75);
+				}
+			}
+		}
+
+		.#{$block-name}__lang-items {
+			flex-direction: row;
+			padding-top: 10px;
+			padding-left: 10px;
+			padding-bottom: 10px;
+			padding-right: 0;
+			z-index: 100;
+			.#{$block-name}__select-lang {
+				margin-right: 10px;
+				position: relative;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__lang-items {
+		position: absolute;
+		top: 120%;
+		background-color: $color-orange;
+		pointer-events: none;
+		opacity: 0;
+		padding-top: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		left: -10px;
+		transform: translateY(-20px);
+		transition: all 0.3s;
+		flex-direction: column;
+		z-index: 100;
+
+		&.active {
+			display: flex;
+			opacity: 1;
+			transform: translateY(0);
+			pointer-events: auto;
+		}
+
+		.#{$block-name}__select-lang {
+			color: $color-dark-blue2;
+			margin-bottom: 10px;
+
+			&::after {
+				background-color: $color-dark-blue2;
+			}
+
+			&:hover {
+				color: $color-white;
+
+				&::after {
+					background-color: $color-white;
+				}
+			}
+		}
+	}
+
+	&__search-wrapper {
+		display: flex;
+		border-bottom: 1px solid $color-dark-blue;
+		padding-bottom: 0.5rem;
+	}
+
+	&__search-input {
+		border: none;
+		outline: none;
+		font-size: 0.8rem;
+		line-height: 1rem;
+		color: $color-dark-blue;
+
+		&::placeholder {
+			font-size: 0.8rem;
+			line-height: 1rem;
+			color: rgba(#151c2c, 0.5);
+		}
+	}
+
+	&__icons {
+		display: none;
+		align-items: center;
+
+        @media(min-width: map-get($site-breakpoints, 'middle')) {
+            display: flex;
+        }
+	}
+
+	&__icon {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-right: 1.5rem;
+		}
+
+		&:hover {
+			svg {
+				path {
+					fill: $color-orange;
+				}
+
+				circle {
+					stroke: $color-orange;
+				}
+			}
+		}
+
+		&--lang {
+			position: relative;
+
+			a {
+				color: white;
+				font-size: 14px;
+				font-weight: 500;
+				position: relative;
+
+				&:hover {
+					color: $color-orange;
+
+					&::after {
+						background-color: $color-orange;
+					}
+				}
+
+				&::after {
+					position: absolute;
+					content: '';
+					height: 2px;
+					width: 125%;
+					bottom: 0;
+					background-color: #fff;
+					left: -15%;
+					border-radius: 1px;
+					transform: scale(0.75);
+				}
+			}
+		}
+	}
+
+	&__menu-hamburger {
+		position: relative;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		width: 1.25rem;
+		height: 1.25rem;
+		font-size: 0;
+		text-indent: -9999px;
+		appearance: none;
+		box-shadow: none;
+		border-radius: none;
+		border: none;
+		cursor: pointer;
+		transition: background 0.3s;
+        
+        @media(min-width: map-get($site-breakpoints, 'middle')) {
+            display: none;
+        }
+
+		&:focus {
+			outline: none;
+		}
+
+		span {
+			display: block;
+			position: absolute;
+			border-radius: 2px;
+			width: 0.75rem;
+			height: 0.1rem;
+			background: $color-white;
+			left: 0.5rem;
+
+			&::before {
+				top: 0.5rem;
+				transition-property: top, transform;
+			}
+
+			&::after {
+				bottom: 0.5rem;
+				transition-property: bottom, transform;
+			}
+
+			&::before,
+			&::after {
+				border-radius: 2px;
+				position: absolute;
+				display: block;
+				left: -0.5rem;
+				width: 1.25rem;
+				height: 2px;
+				background-color: $color-white;
+				content: "";
+				transition-duration: 0.1s, 0.1s;
+				transition-delay: 0.1s, 0s;
+			}
+		}
+
+		&--active span {
+			background: none;
+
+			&::after {
+				top: 0;
+				transform: rotate(-45deg);
+				transition-delay: 0s, 0.1s;
+			}
+
+			&::before {
+				bottom: 0;
+				top: 0;
+				transform: rotate(45deg);
+				transition-delay: 0s, 0.1s;
+			}
+		}
+	}
+}

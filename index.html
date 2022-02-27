@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/common/rocket.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.3.3/swiper-bundle.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+  />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>День космонавтики</title>
+</head>
+<body>
+    
+        <header class="header">
+            <div class="header__content">
+                <div class="container">
+                    <div class="header__content-inner">
+                        <div class="header__logo" style="-webkit-mask-image: url(/images/common/rocket.png);-webkit-mask-image: url(/images/common/rocket.png)">
+
+                        </div>
+                        <div class="header__menu-items">
+                            <a class="header__menu-item" href="#" id="test">
+                                Баннер
+                            </a>
+                            <a class="header__menu-item" href="#" id="test">
+                                Афиша событий
+                            </a>
+                            <a class="header__menu-item" href="#video-block">
+                                Видео
+                            </a>
+                            <a class="header__menu-item" href="#" id="test">
+                                Наши космонавты
+                            </a>
+                            <a class="header__menu-item" href="#" id="test">
+                                test
+                            </a>
+                            <a class="header__menu-item" href="#" id="test">
+                                test
+                            </a>
+                        </div>
+                    
+                        <button class="header__menu-hamburger">
+                            <span>MENU</span>
+                        </button>
+                        <!-- <div class="{{ $block->elem('mobile-menu') }}">
+                            <div class="{{ $block->elem('mobile-menu-inner') }}">
+                                @foreach ($menu_items as $menu_item)
+                                @if ($menu_item['link'] != '')
+                                    <div class="{{ $block->elem('mobile-menu-item-wrapper') }}">
+                                        <a class="{{ $block->elem('mobile-menu-item') }}" id="{{ $loop->index }}" href="{{ $menu_item['link'] }}">
+                                            {!! $menu_item['title'] !!} <img class="{{ $block->elem('mobile-menu-item-icon') }}" src="/images/site/plus.png" alt="">
+                                        </a>
+                                    </div>
+                                @else
+                                    <div class="{{ $block->elem('mobile-menu-item-wrapper') }}">
+                                        <div class="{{ $block->elem('mobile-menu-item') }}" id="{{ $loop->index }}">
+                                            {!! $menu_item['title'] !!} <img class="{{ $block->elem('mobile-menu-item-icon') }}" src="/images/site/plus.png" alt="">
+                                        </div>
+                                        <div class="{{ $block->elem('mobile-menu-item-content') }}" data-id="{{ $loop->index }}">
+                                            @foreach ($menu_item['sub'] as $item)
+                                                <a class="{{ $block->elem('mobile-menu-item-link') }}" href="{{ $item['link'] }}">{!! $item['title'] !!}</a>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endif
+
+                            @endforeach
+
+                            <div class="{{ $block->elem('mobile-menu-icons') }}">
+                                <div class="{{ $block->elem('mobile-icon')->mod('user') }}">
+                                    {!! Tools\Common::inlineSvg('/images/site/user-icon.svg') !!}
+                                </div>
+                                <div class="{{ $block->elem('mobile-icon')->mod('lang') }}">
+                                    @foreach ($lang_items as $item)
+                                    @if ($item['is_active'])
+                                        <a class="{{ $block->elem('active-lang') }}" href="{{ $item['link'] }}">
+                                            {!! $item['title'] !!}
+                                        </a>
+                                    @endif
+                                    @endforeach
+                                    <div class="{{ $block->elem('lang-items') }}">
+                                        @foreach ($lang_items as $item)
+                                            @if (!$item['is_active'])
+                                                <a class="{{ $block->elem('select-lang') }}" href="{{ $item['link'] }}">
+                                                    {!! $item['title'] !!}
+                                                </a>
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <div class="{{ $block->elem('mobile-icon')->mod('voskl') }}">
+                                    {!! Tools\Common::inlineSvg('/images/site/voskl-icon.svg') !!}
+                                </div>
+                            </div>
+
+                            <form class="{{ $block->elem('search-wrapper') }}">
+                                <div class="{{ $block->elem('mobile-icon')->mod('search') }}">
+                                    {!! Tools\Common::inlineSvg('/images/site/search-icon.svg') !!}
+                                </div>
+                                <input class="{{ $block->elem('search-input') }}" type="text" placeholder="Search">
+                            </form>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- баннер на первом экране -->
+        <section class="first-banner">
+            <div class="first-banner__bg" id="scene" data-relative-input="true" >
+                    <div class="first-banner__bg-layer" id="scene" data-depth="0.2">My first Layer!</div>
+            </div>
+            <div class="container">
+                <div class="first-banner__slider swiper" >
+                    <div class="swiper-wrapper">
+                        
+                            <div class="first-banner__slide swiper-slide">
+                                <div class="first-banner__slide-content">
+                                    <div class="first-banner__slide-title h1"> Международный день полёта человека в космос </div>
+                                        <div class="first-banner__slide-subtitle"> Ежегодно отмечается 12 апреля. </div>
+                                    <div class="first-banner__slide-link--anime">
+                                        <a target="_blank"  class="first-banner__slide-link" href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BD%D1%8C_%D0%BA%D0%BE%D1%81%D0%BC%D0%BE%D0%BD%D0%B0%D0%B2%D1%82%D0%B8%D0%BA%D0%B8"> wiki</a>
+                                    </div>
+                                </div>
+                                <div class="first-banner__slide-img">
+                                    <img src="/images/gagarin.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="first-banner__slide swiper-slide">
+                                <div class="first-banner__slide-content">
+                                    <div class="first-banner__slide-title h1"> Праздник «День космонавтики»  </div>
+                                        <div class="first-banner__slide-subtitle">учредили в 1962 году. Через шесть лет он получил международный статус, День авиации и космонавтики, который до сих пор отмечается ежегодно. </div>
+                                    <div class="first-banner__slide-link--anime">
+                                    </div>
+                                </div>
+                                <div class="first-banner__slide-img">
+                                    <img src="/images/first-banner-img-1.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="first-banner__slide swiper-slide">
+                                <div class="first-banner__slide-content">
+                                    <div class="first-banner__slide-title h1">Первый человек на Луне  </div>
+                                        <div class="first-banner__slide-subtitle">
+                                             45 лет назад, 16 июля 1969 пилотируемый 
+                                            космический корабль «Аполлон-11» отправился в полет, 
+                                            в ходе которого жители Земли впервые в истории совершили посадку на поверхность другого небесного тела - Луны.  </div>
+                                    <div class="first-banner__slide-link--anime">
+                                        <a target="_blank"  class="first-banner__slide-link" href="https://goaravetisyan.ru/kto-pervyi-vysadil-cheloveka-na-lunu-byli-li-lyudi-na-lune/">Статья</a>
+                                    </div>
+                                </div>
+                                <div class="first-banner__slide-img">
+                                    <img src="/images/moon.jpg" alt="">
+                                </div>
+                            </div>
+                    
+                    </div>
+                    <div class="first-banner__dots "></div>
+                </div>
+
+                    <div class="first-banner__tabs">
+                        
+                            <div class="first-banner__tab first-banner__tab--active" id='0'>
+                                <div class="first-banner__tab-tag" style="background-color: blue">
+                                    Россия
+                                </div>
+                                <div class="first-banner__tab-description">
+                                    12 апреля – важная дата для России и всего мира. В этот день наш космонавт Юрий Гагарин совершил первый полёт в космос.
+                                    <svg class="next" width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.36717 5.36546L0.337574 1.55992C0.0657558 1.30322 0.0657558 0.885942 0.337574 0.62928C0.609391 0.372618 1.05124 0.372576 1.32301 0.62928L5.84326 4.89815C5.97987 5.02716 6.04675 5.19565 6.04675 5.36546C6.04675 5.53527 5.97983 5.70375 5.84326 5.83277L1.32301 10.1003C1.05119 10.3557 0.609347 10.3557 0.337574 10.1003C0.0657558 9.8436 0.0657558 9.42504 0.337574 9.16966L4.36717 5.36546Z" fill="white"></path>
+                                        </svg>
+                                </div>
+                                <div class="first-banner__tab-line">
+                                </div>
+                            </div>
+                            <div class="first-banner__tab" id='1'>
+                                <div class="first-banner__tab-tag" style="background-color: #41a2e2">
+                                    ООН
+                                </div>
+                                <div class="first-banner__tab-description">
+                                    в 2011 году на Генеральной Ассамблее ООН было принято решение ежегодно отмечать 12 апреля Международный день полёта человека в космос.
+                                    <svg class="next" width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.36717 5.36546L0.337574 1.55992C0.0657558 1.30322 0.0657558 0.885942 0.337574 0.62928C0.609391 0.372618 1.05124 0.372576 1.32301 0.62928L5.84326 4.89815C5.97987 5.02716 6.04675 5.19565 6.04675 5.36546C6.04675 5.53527 5.97983 5.70375 5.84326 5.83277L1.32301 10.1003C1.05119 10.3557 0.609347 10.3557 0.337574 10.1003C0.0657558 9.8436 0.0657558 9.42504 0.337574 9.16966L4.36717 5.36546Z" fill="white"></path>
+                                        </svg>
+                                </div>
+                                <div class="first-banner__tab-line">
+                                </div>
+                            </div>
+                            <div class="first-banner__tab" id='2'>
+                                <div class="first-banner__tab-tag" style="background-color: red">
+                                    США
+                                </div>
+                                <div class="first-banner__tab-description">
+                                    «Маленький шаг для человека, но гигантский скачок для всего человечества»
+                                    <svg class="next" width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.36717 5.36546L0.337574 1.55992C0.0657558 1.30322 0.0657558 0.885942 0.337574 0.62928C0.609391 0.372618 1.05124 0.372576 1.32301 0.62928L5.84326 4.89815C5.97987 5.02716 6.04675 5.19565 6.04675 5.36546C6.04675 5.53527 5.97983 5.70375 5.84326 5.83277L1.32301 10.1003C1.05119 10.3557 0.609347 10.3557 0.337574 10.1003C0.0657558 9.8436 0.0657558 9.42504 0.337574 9.16966L4.36717 5.36546Z" fill="white"></path>
+                                        </svg>
+                                </div>
+                                <div class="first-banner__tab-line">
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </section>
+        
+    <!-- баннер на первом экране -->
+    <!-- Афиша событий -->
+        
+    <div class="event-slider__wrapper" >
+        <div class="container">
+            <div class="event-slider">
+                <div class="event-slider__slider-nav">
+                    <div class="event-slider__title">
+                        Афиша событий
+                    </div>
+                    <div class="event-slider__arrows">
+                        <svg class="event-slider__arrow-prev event-slider__arrow" width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg" tabIndex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-6c3ffdc08897c341" aria-disabled="true">
+                            <path d="M4.00604 11.2214L12.7898 19.5168C13.3823 20.0764 13.3823 20.986 12.7898 21.5454C12.1973 22.1049 11.2342 22.105 10.6417 21.5454L0.788422 12.2401C0.490636 11.9589 0.34485 11.5916 0.34485 11.2214C0.34485 10.8513 0.490732 10.484 0.788422 10.2028L10.6417 0.900338C11.2343 0.343661 12.1974 0.343661 12.7898 0.900338C13.3823 1.4599 13.3823 2.37229 12.7898 2.92897L4.00604 11.2214Z" fill="#245B8F" fill-opacity="0.2"></path>
+                            </svg>
+                            <svg class="event-slider__arrow-next event-slider__arrow" width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg" tabIndex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-6c3ffdc08897c341" aria-disabled="false">
+                                <path d="M9.99408 11.2258L1.21031 2.93045C0.617792 2.37089 0.617792 1.4613 1.21031 0.901819C1.80282 0.342342 2.76596 0.342252 3.35838 0.901819L13.2117 10.2072C13.5095 10.4884 13.6553 10.8557 13.6553 11.2258C13.6553 11.596 13.5094 11.9632 13.2117 12.2445L3.35838 21.5469C2.76587 22.1036 1.80272 22.1036 1.21031 21.5469C0.617792 20.9874 0.617792 20.075 1.21031 19.5183L9.99408 11.2258Z" fill="#04A7B5"></path>
+                                </svg>
+                    </div>
+                </div>
+
+                    <div class="event-slider__slider swiper" >
+                        <div class="swiper-wrapper">
+                            <div class="event-slider__slide swiper-slide">
+                                <div class="event-slider__slide-img" style="background-image: url('./images/event1.jpg')">
+
+                                </div>
+                                <div class="event-slider__slide-content">
+                                    <div class="event-slider__slide-content-top">
+                                        <div class="event-slider__slide-tag" style="background-color:red ">
+                                            СССР
+                                        </div>
+                                        <div class="event-slider__slide-date">
+                                            16 июня 1963 года
+                                        </div>
+                                    </div>
+                                    <div class="event-slider__slide-description">
+                                        Первая женщина космонавт
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-slider__slide swiper-slide">
+                                <div class="event-slider__slide-img" style="background-image: url('./images/event2.jpg')">
+
+                                </div>
+                                <div class="event-slider__slide-content">
+                                    <div class="event-slider__slide-content-top">
+                                        <div class="event-slider__slide-tag" style="background-color:red ">
+                                            США
+                                        </div>
+                                        <div class="event-slider__slide-date">
+                                            30 мая 2020 г.
+                                        </div>
+                                    </div>
+                                    <div class="event-slider__slide-description">
+                                        Первый в истории пилотируемый запуск, произведенный частной компанией
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-slider__slide swiper-slide">
+                                <div class="event-slider__slide-img" style="background-image: url('https://via.placeholder.com/300/FF0000/FFFFFF?Text=Down.com')">
+
+                                </div>
+                                <div class="event-slider__slide-content">
+                                    <div class="event-slider__slide-content-top">
+                                        <div class="event-slider__slide-tag" style="background-color:red ">
+                                            tag name
+                                        </div>
+                                        <div class="event-slider__slide-date">
+                                            tag date
+                                        </div>
+                                    </div>
+                                    <div class="event-slider__slide-description">
+                                       desc
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-slider__slide swiper-slide">
+                                <div class="event-slider__slide-img" style="background-image: url('https://via.placeholder.com/300/FF0000/FFFFFF?Text=Down.com')">
+
+                                </div>
+                                <div class="event-slider__slide-content">
+                                    <div class="event-slider__slide-content-top">
+                                        <div class="event-slider__slide-tag" style="background-color:red ">
+                                            tag name
+                                        </div>
+                                        <div class="event-slider__slide-date">
+                                            tag date
+                                        </div>
+                                    </div>
+                                    <div class="event-slider__slide-description">
+                                       desc
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-slider__slide swiper-slide">
+                                <div class="event-slider__slide-img" style="background-image: url('https://via.placeholder.com/300/FF0000/FFFFFF?Text=Down.com')">
+
+                                </div>
+                                <div class="event-slider__slide-content">
+                                    <div class="event-slider__slide-content-top">
+                                        <div class="event-slider__slide-tag" style="background-color:red ">
+                                            tag name
+                                        </div>
+                                        <div class="event-slider__slide-date">
+                                            tag date
+                                        </div>
+                                    </div>
+                                    <div class="event-slider__slide-description">
+                                       desc
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-slider__slide swiper-slide">
+                                <div class="event-slider__slide-img" style="background-image: url('https://via.placeholder.com/300/FF0000/FFFFFF?Text=Down.com')">
+
+                                </div>
+                                <div class="event-slider__slide-content">
+                                    <div class="event-slider__slide-content-top">
+                                        <div class="event-slider__slide-tag" style="background-color:red ">
+                                            tag name
+                                        </div>
+                                        <div class="event-slider__slide-date">
+                                            tag date
+                                        </div>
+                                    </div>
+                                    <div class="event-slider__slide-description">
+                                       desc
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- Афиша событий -->
+    <!-- Блок с видео -->
+        
+    <div class="video-block" id="video-block">
+        <div class="container">
+            <div class="video-block__wrapper">
+                <div class="video-block__content">
+                    <div class="video-block__title h1">
+                        1961 год первый человек в космосе Юрий Гагарин
+                    </div>
+                    <div class="video-block__description p">
+                        12 апреля 1961 года с космодрома Байконур впервые в мире стартовал космический корабль «Восток», с пилотом-космонавтом Юрием Алексеевичем Гагариным на борту. За этот подвиг ему было присвоено звание Героя Советского Союза, а начиная с 12 апреля 1962 года день полёта Гагарина в космос был объявлен праздником — Днём космонавтики.
+                    </div>
+                    <a class="video-block__play-btn" data-fancybox href="https://www.youtube.com/watch?v=b0ktgWlN7SE&ab_channel=%D0%A0%D0%BE%D1%81%D0%BA%D0%BE%D1%81%D0%BC%D0%BE%D1%81%D0%A2%D0%92">
+                        <img class="video-block__play-btn-img" src="/images/play-btn-icon.svg" alt="">
+                        Смотреть видео
+                    </a>
+                </div>
+                <div class="video-block__video" style="background-image: url('./images/gagarin2.jpg')">
+                    <div class="video-block__video-play-btn" data-fancybox href="https://www.youtube.com/watch?v=b0ktgWlN7SE&ab_channel=%D0%A0%D0%BE%D1%81%D0%BA%D0%BE%D1%81%D0%BC%D0%BE%D1%81%D0%A2%D0%92">
+                        <img class="video-block__video-play-btn-img" src="/images/play-video-btn.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Блок с видео -->
+
+    <!-- Блок с кружками -->
+        
+    <div class="block-our-astronauts" >
+  
+        <div class="container">
+            <div class="block-our-astronauts__top">
+                <div class="block-our-astronauts__title h1">
+                   Наши космонавты
+                </div>
+                
+                <a class="block-our-astronauts__all-link c-all-link" href="http://www.gctc.ru/main.php?id=154" target="_blank" >
+                    Смотреть больше
+                </a>
+            </div>
+
+            <div class="block-our-astronauts__slider swiper" >
+                <div class="swiper-wrapper">
+                    <div class="block-our-astronauts__slide swiper-slide">
+                        <div class="block-our-astronauts__slide-img-wrapper">
+                            <div class="block-our-astronauts__slide-img" style="background-image: url('./images/our-1.jpg">
+
+                            </div>
+                        </div>
+                        <div class="block-our-astronauts__slide-logo" style="-webkit-mask-image: url('/images/common/rocket.png');-webkit-mask-image: url('/images/common/rocket.png')">
+
+                        </div>
+                     
+
+
+                        <div class="block-our-astronauts__slide-title h3">
+                            Кононенко <br>
+                            Олег Дмитриевич
+                        </div>
+
+                        <div class="block-our-astronauts__slide-description p">
+                            Герой Российской Федерации, летчик-космонавт РФ
+                        </div>
+
+                        <a class="block-our-astronauts__slide-link c-orange-btn" href="http://www.gctc.ru/main.php?id=3304" target="_blank" >Узнать больше</a>
+
+                    </div>
+                    <div class="block-our-astronauts__slide swiper-slide">
+                        <div class="block-our-astronauts__slide-img-wrapper">
+                            <div class="block-our-astronauts__slide-img" style="background-image: url('./images/our-2.jpg">
+
+                            </div>
+                        </div>
+                        <div class="block-our-astronauts__slide-logo" style="-webkit-mask-image: url('/images/common/rocket.png');-webkit-mask-image: url('/images/common/rocket.png')">
+
+                        </div>
+                     
+
+
+                        <div class="block-our-astronauts__slide-title h3">
+                            Скворцов
+                            Александр Александрович
+                        </div>
+
+                        <div class="block-our-astronauts__slide-description p">
+                            Герой Российской Федерации, лётчик-космонавт РФ
+                        </div>
+
+                        <a class="block-our-astronauts__slide-link c-orange-btn" href="http://www.gctc.ru/main.php?id=4691" target="_blank" >Узнать больше</a>
+
+                    </div>
+                    <div class="block-our-astronauts__slide swiper-slide">
+                        <div class="block-our-astronauts__slide-img-wrapper">
+                            <div class="block-our-astronauts__slide-img" style="background-image: url('./images/our-3.jpg">
+
+                            </div>
+                        </div>
+                        <div class="block-our-astronauts__slide-logo" style="-webkit-mask-image: url('/images/common/rocket.png');-webkit-mask-image: url('/images/common/rocket.png')">
+
+                        </div>
+                     
+
+
+                        <div class="block-our-astronauts__slide-title h3">
+                            Шкаплеров <br>
+                            Антон Николаевич
+                        </div>
+
+                        <div class="block-our-astronauts__slide-description p">
+                            Герой Российской Федерации, летчик-космонавт РФ
+                        </div>
+
+                        <a class="block-our-astronauts__slide-link c-orange-btn" href="http://www.gctc.ru/main.php?id=218" target="_blank" >Узнать больше</a>
+
+                    </div>
+                </div>
+                <div class="block-our-astronauts__lines">
+
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Блок с кружками -->
+        
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script type="module" src="/script.js"></script>
+</body>
+</html> 
