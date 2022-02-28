@@ -1,5 +1,5 @@
 import Swiper from 'https://unpkg.com/swiper@7.3.3/swiper-bundle.esm.browser.min.js';
-import anime from '/libs/animeJS/anime.es.js';
+import anime from './libs/animeJS/anime.es.js';
 import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.esm.js";
 
 $(document).ready(function () {
