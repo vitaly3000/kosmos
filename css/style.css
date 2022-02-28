@@ -88,7 +88,7 @@ body {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   content: '';
-  background-image: url("/images/arrow-next.svg");
+  background-image: url("../images/arrow-next.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -891,7 +891,7 @@ a {
   width: 110%;
   height: 100%;
   background-size: cover;
-  background-image: url("/images/stars-bg.jpg");
+  background-image: url("../images/stars-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1696,7 +1696,7 @@ a {
   right: 0;
   bottom: 0;
   margin: auto;
-  background-image: url("/images/circle-border.png");
+  background-image: url("../images/circle-border.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
