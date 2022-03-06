@@ -1,0 +1,139 @@
+
+$block-name: 'photo-gallery';
+
+.#{$block-name} {
+    margin: 50px 0;
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__slider {
+		padding: 40px 0;
+		height: auto;
+
+		@include for-width('mobile3') {
+			width: calc(100% - 100px);
+		}
+
+		@include for-width('middle') {
+			width: 100%;
+		}
+	}
+
+	&__slide {
+		background-color: $color-white;
+		box-shadow: 0 4px 30px #f0f0f6;
+		border-radius: 20px;
+		cursor: pointer;
+		transition: box-shadow 0.3s;
+		color: $color-dark-blue;
+		width: 100%;
+		position: relative;
+		height: 100%;
+		text-align: center;
+
+		@include for-width('middle2') {
+			max-width: 400px;
+			min-height: 340px;
+		}
+
+		&:hover {
+			box-shadow: 3px 4px 30px rgba(123, 152, 179, 0.3);
+		}
+	}
+
+    &__slide-image-wrapper {
+        img {
+            height: 250px;
+            width: 100%;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            object-fit: cover;
+        }
+       
+    }
+
+	&__slide-name {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+        margin: 20px 0;
+
+		@include for-width('middle3') {
+			font-size: 26px;
+			line-height: 34px;
+		}
+	}
+
+	&__arrows {
+		position: absolute;
+		display: none;
+		max-width: calc(1240px + 180px);
+		width: calc(100% + 30px);
+		justify-content: space-between;
+		top: 50%;
+
+		@include for-width('mobile3') {
+			display: flex;
+		}
+
+		@include for-width('middle') {
+			width: calc(100% + 100px);
+		}
+	}
+
+	&__arrow-wrapper {
+		height: 40px;
+		width: 40px;
+		border-radius: 50%;
+		border: 1px solid $color-turquoise;
+		position: relative;
+		cursor: pointer;
+
+		&--disabled {
+			opacity: 0.5;
+			border: 1px solid  rgba($color-turquoise, 0.5);
+		}
+	}
+
+	&__arrow {
+		transition: all 0.3s;
+		position: absolute;
+		width: 10px;
+		height: 15px;
+		top: 50%;
+		right: 50%;
+		transform: translate(50%, -50%);
+
+		path {
+			fill: $color-turquoise;
+			fill-opacity: 1;
+		}
+	}
+
+	&__slider-bullets {
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+
+		@include for-width('mobile3') {
+			display: none;
+		}
+	}
+
+	&__slider-bullet {
+		height: 8px;
+		width: 8px;
+		background-color: #ced9e5;
+		border-radius: 50%;
+		margin: 0 10px;
+		cursor: pointer;
+
+		&--active {
+			background-color: $color-turquoise;
+		}
+	}
+}

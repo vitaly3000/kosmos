@@ -1,0 +1,189 @@
+
+$block-name: 'footer';
+
+.#{$block-name} {
+	background-color: #13203f;
+	color: $color-white;
+	padding-top: 1.5rem;
+	position: relative;
+
+	&__noise {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		opacity: 0.04;
+		top: 0;
+		left: 0;
+		background-image: url('../../images/common/noise.gif');
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 2.5rem;
+
+		@include for-width('mobile3') {
+			padding-bottom: 2.5rem;
+		}
+
+		@include for-width('middle2') {
+			margin-top: 50px;
+			padding-bottom: 0;
+		}
+
+		@include for-width-down('mobile2') {
+			margin-top: 10px;
+		}
+	}
+
+	&__block {
+		font-size: 0.7rem;
+		line-height: 0.9rem;
+		margin-bottom: 20px;
+	}
+
+	&__block-title {
+		font-size: 0.9rem;
+		font-weight: 700;
+		line-height: 1.05rem;
+		margin-bottom: 1.25rem;
+		width: 100%;
+		text-align: start;
+	}
+
+	&__block-link {
+		font-size: 0.7rem;
+		color: #2ab7c9;
+		text-decoration: none;
+		display: block;
+	}
+
+	&__menu {
+		display: none;
+		justify-content: space-between;
+		padding-bottom: 25px;
+		border-bottom: 1px solid rgba($color-white, 0.1);
+
+		@include for-width('middle2') {
+			display: flex;
+		}
+	}
+
+	&__menu-link {
+		text-decoration: none;
+		font-size: 0.9rem;
+		line-height: 1.05rem;
+		color: $color-white;
+		font-weight: 500;
+	}
+
+
+	&__description {
+		font-size: 12px;
+	
+		@include for-width('mobile2') {
+			font-size: 14px;
+		}
+
+		@include for-width('mobile3') {
+			max-width: 15rem;
+		}
+	}
+
+	&__logo {
+		padding-bottom: 1rem;
+		margin-top: -12px;
+		width: 50px;
+		height: 50px;
+		filter: brightness(0) invert(1);
+
+		@include for-width('mobile3') {
+			padding-bottom: 0.75rem;
+		}
+	}
+
+
+	&__subscribe {
+		width: 100%;
+
+		@include for-width('mobile3') {
+			width: 50%;
+		}
+
+		@include for-width('middle2') {
+			width: 100%;
+		}
+	}
+
+	&__address {
+		margin-bottom: 1.5rem;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include for-width('mobile3') {
+			width: 50%;
+			flex-direction: column;
+		}
+
+		@include for-width('middle2') {
+			width: 100%;
+		}
+	}
+
+	&__address-content {
+		margin-bottom: 0.75rem;
+		margin-right: 15px;
+
+		@include for-width('mobile3') {
+			margin-right: 0;
+		}
+	}
+
+
+
+	&__politics {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 1.25rem 0;
+		border-top: 1px solid rgba($color-white, 0.1);
+		
+		.#{$block-name}__block-title {
+			width: auto;
+		}
+	}
+
+	&__politics-link {
+		font-size: 0.6rem;
+		line-height: 0.7rem;
+		width: 100%;
+		margin-bottom: 1.5rem;
+		color: $color-white;
+		text-decoration: underline;
+		text-align: center;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		@include for-width('mobile3') {
+			text-decoration: none;
+			width: auto;
+		}
+
+		@include for-width('middle') {
+			margin-bottom: 0;
+
+			&:not(:last-child) {
+				margin-right: 2.5rem;
+			}
+		}
+	}
+}

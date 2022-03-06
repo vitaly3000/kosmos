@@ -1,0 +1,40 @@
+
+$block-name: 'btn-top';
+
+.#{$block-name} {
+	display: none;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background: rgba(#04a7b5, 0.3);
+	position: fixed;
+	right: 20px;
+	bottom: 70px;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: all 0.5s;
+	z-index: -100;
+
+	@include for-width('middle') {
+		display: flex;
+	}
+
+	@include for-width('middle3') {
+		right: 10%;
+	}
+
+	&.active {
+		opacity: 1;
+		z-index: 1000;
+	}
+
+	&:hover {
+		background: rgba(#04a7b5, 1);
+	}
+
+	img {
+		flex: 0 0 auto;
+	}
+}

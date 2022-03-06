@@ -101,7 +101,8 @@ $block-name: 'event-slider';
 		border-radius: 1rem;
 		background: $color-white;
 		max-width: 13.5rem;
-		max-height: 320px;
+		max-height: 340px;
+		height: auto;
 		will-change: transform;
         box-shadow: 0 0 15px rgba($color-black, 0.1);
 

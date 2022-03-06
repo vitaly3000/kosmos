@@ -4,6 +4,9 @@
 
 @include site-fonts();
 
+html {
+    font-size: $body-font-size;
+}
 body {
     font-size: $body-font-size;
     font-family: $body-font-family;
@@ -133,6 +136,7 @@ h3,
 
 a {
     text-decoration: none;
+    color: $body-font-color;
 }
 
 .c-orange-btn {

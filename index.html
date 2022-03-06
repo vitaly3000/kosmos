@@ -11,10 +11,16 @@
     href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
   />
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <title>День космонавтики</title>
 </head>
 <body>
-    
+    <!-- Кнопка вверх -->
+    <div class="btn-top">
+        <img src="./images/common/arrow-top.svg" alt="">
+    </div>
+<!-- Кнопка вверх -->
+
         <header class="header">
             <div class="header__content">
                 <div class="container">
@@ -23,94 +29,68 @@
 
                         </div>
                         <div class="header__menu-items">
-                            <a class="header__menu-item" href="#" id="test">
-                                Баннер
-                            </a>
-                            <a class="header__menu-item" href="#" id="test">
+                            <a class="header__menu-item" href="#event-slider">
                                 Афиша событий
                             </a>
                             <a class="header__menu-item" href="#video-block">
                                 Видео
                             </a>
-                            <a class="header__menu-item" href="#" id="test">
+                            <a class="header__menu-item" href="#our-astronauts">
                                 Наши космонавты
                             </a>
-                            <a class="header__menu-item" href="#" id="test">
-                                test
+                            <a class="header__menu-item" href="#photo-gallery">
+                                Фотогалерея
                             </a>
-                            <a class="header__menu-item" href="#" id="test">
-                                test
+                            <a class="header__menu-item" href="#college">
+                                Колледж
+                            </a>
+                            <a class="header__menu-item" href="#questions">
+                                Вопросы
                             </a>
                         </div>
                     
                         <button class="header__menu-hamburger">
                             <span>MENU</span>
                         </button>
-                        <!-- <div class="{{ $block->elem('mobile-menu') }}">
-                            <div class="{{ $block->elem('mobile-menu-inner') }}">
-                                @foreach ($menu_items as $menu_item)
-                                @if ($menu_item['link'] != '')
-                                    <div class="{{ $block->elem('mobile-menu-item-wrapper') }}">
-                                        <a class="{{ $block->elem('mobile-menu-item') }}" id="{{ $loop->index }}" href="{{ $menu_item['link'] }}">
-                                            {!! $menu_item['title'] !!} <img class="{{ $block->elem('mobile-menu-item-icon') }}" src="/images/site/plus.png" alt="">
-                                        </a>
-                                    </div>
-                                @else
-                                    <div class="{{ $block->elem('mobile-menu-item-wrapper') }}">
-                                        <div class="{{ $block->elem('mobile-menu-item') }}" id="{{ $loop->index }}">
-                                            {!! $menu_item['title'] !!} <img class="{{ $block->elem('mobile-menu-item-icon') }}" src="/images/site/plus.png" alt="">
-                                        </div>
-                                        <div class="{{ $block->elem('mobile-menu-item-content') }}" data-id="{{ $loop->index }}">
-                                            @foreach ($menu_item['sub'] as $item)
-                                                <a class="{{ $block->elem('mobile-menu-item-link') }}" href="{{ $item['link'] }}">{!! $item['title'] !!}</a>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                @endif
-
-                            @endforeach
-
-                            <div class="{{ $block->elem('mobile-menu-icons') }}">
-                                <div class="{{ $block->elem('mobile-icon')->mod('user') }}">
-                                    {!! Tools\Common::inlineSvg('/images/site/user-icon.svg') !!}
-                                </div>
-                                <div class="{{ $block->elem('mobile-icon')->mod('lang') }}">
-                                    @foreach ($lang_items as $item)
-                                    @if ($item['is_active'])
-                                        <a class="{{ $block->elem('active-lang') }}" href="{{ $item['link'] }}">
-                                            {!! $item['title'] !!}
-                                        </a>
-                                    @endif
-                                    @endforeach
-                                    <div class="{{ $block->elem('lang-items') }}">
-                                        @foreach ($lang_items as $item)
-                                            @if (!$item['is_active'])
-                                                <a class="{{ $block->elem('select-lang') }}" href="{{ $item['link'] }}">
-                                                    {!! $item['title'] !!}
-                                                </a>
-                                            @endif
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <div class="{{ $block->elem('mobile-icon')->mod('voskl') }}">
-                                    {!! Tools\Common::inlineSvg('/images/site/voskl-icon.svg') !!}
-                                </div>
+                        <div class="header__mobile-menu">
+                            <div class="header__mobile-menu-item-wrapper">
+                                <a class="header__mobile-menu-item" href="#event-slider">
+                                    Афиша событий
+                                </a>
                             </div>
-
-                            <form class="{{ $block->elem('search-wrapper') }}">
-                                <div class="{{ $block->elem('mobile-icon')->mod('search') }}">
-                                    {!! Tools\Common::inlineSvg('/images/site/search-icon.svg') !!}
-                                </div>
-                                <input class="{{ $block->elem('search-input') }}" type="text" placeholder="Search">
-                            </form>
+                            <div class="header__mobile-menu-item-wrapper">
+                                <a class="header__mobile-menu-item" href="#video-block">
+                                    Видео
+                                </a>
                             </div>
-                        </div> -->
+                            <div class="header__mobile-menu-item-wrapper">
+                                <a class="header__mobile-menu-item" href="#our-astronauts">
+                                    Наши космонавты  
+                                </a>
+                            </div>
+                            <div class="header__mobile-menu-item-wrapper">
+                                <a class="header__mobile-menu-item" href="#photo-gallery">
+                                    Фотогалерея
+                                </a>
+                            </div>
+                            <div class="header__mobile-menu-item-wrapper">
+                                <a class="header__mobile-menu-item" href="#college">
+                                    Колледж
+                                </a>
+                            </div>
+                            <div class="header__mobile-menu-item-wrapper">
+                                <a class="header__mobile-menu-item" href="#questions">
+                                    Вопросы
+                                </a>
+                            </div>
+                         
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
         <!-- баннер на первом экране -->
-        <section class="first-banner">
+        <section class="first-banner" id="banner">
             <div class="first-banner__bg" id="scene" data-relative-input="true" >
                     <div class="first-banner__bg-layer" id="scene" data-depth="0.2">My first Layer!</div>
             </div>
@@ -163,7 +143,7 @@
                     <div class="first-banner__dots "></div>
                 </div>
 
-                    <div class="first-banner__tabs">
+                    <div class="first-banner__tabs" id="event-slider">
                         
                             <div class="first-banner__tab first-banner__tab--active" id='0'>
                                 <div class="first-banner__tab-tag" style="background-color: blue">
@@ -211,7 +191,7 @@
     <!-- баннер на первом экране -->
     <!-- Афиша событий -->
         
-    <div class="event-slider__wrapper" >
+    <section class="event-slider__wrapper">
         <div class="container">
             <div class="event-slider">
                 <div class="event-slider__slider-nav">
@@ -236,7 +216,7 @@
                                 </div>
                                 <div class="event-slider__slide-content">
                                     <div class="event-slider__slide-content-top">
-                                        <div class="event-slider__slide-tag" style="background-color:red ">
+                                        <div class="event-slider__slide-tag" style="background-color:rgb(165, 18, 18) ">
                                             СССР
                                         </div>
                                         <div class="event-slider__slide-date">
@@ -244,7 +224,7 @@
                                         </div>
                                     </div>
                                     <div class="event-slider__slide-description">
-                                        Первая женщина космонавт
+                                        Первая женщина космонавт Валентина Владимировна Терешкова
                                     </div>
                                 </div>
                             </div>
@@ -267,74 +247,73 @@
                                 </div>
                             </div>
                             <div class="event-slider__slide swiper-slide">
-                                <div class="event-slider__slide-img" style="background-image: url('https://via.placeholder.com/300/FF0000/FFFFFF?Text=Down.com')">
+                                <div class="event-slider__slide-img" style="background-image: url('./images/event5.jpg')">
 
                                 </div>
                                 <div class="event-slider__slide-content">
                                     <div class="event-slider__slide-content-top">
-                                        <div class="event-slider__slide-tag" style="background-color:red ">
-                                            tag name
+                                        <div class="event-slider__slide-tag" style="background-color: blue ">
+                                           Россия
                                         </div>
                                         <div class="event-slider__slide-date">
-                                            tag date
+                                            феврале 2011
                                         </div>
                                     </div>
                                     <div class="event-slider__slide-description">
-                                       desc
+                                        ГЛОНАСС - одна из  функционирующих глобальных систем спутниковой навигации
                                     </div>
                                 </div>
                             </div>
                             <div class="event-slider__slide swiper-slide">
-                                <div class="event-slider__slide-img" style="background-image: url('https://via.placeholder.com/300/FF0000/FFFFFF?Text=Down.com')">
+                                <div class="event-slider__slide-img" style="background-image: url('./images/event3.jpg')">
 
                                 </div>
                                 <div class="event-slider__slide-content">
                                     <div class="event-slider__slide-content-top">
-                                        <div class="event-slider__slide-tag" style="background-color:red ">
-                                            tag name
+                                        <div class="event-slider__slide-tag" style="background-color:rgb(165, 18, 18) ">
+                                            СССР
                                         </div>
                                         <div class="event-slider__slide-date">
-                                            tag date
+                                            4 окт 1957 г.
                                         </div>
                                     </div>
                                     <div class="event-slider__slide-description">
-                                       desc
+                                        «Спу́тник-1» — первый в мире искусственный спутник Земли
                                     </div>
                                 </div>
                             </div>
                             <div class="event-slider__slide swiper-slide">
-                                <div class="event-slider__slide-img" style="background-image: url('https://via.placeholder.com/300/FF0000/FFFFFF?Text=Down.com')">
+                                <div class="event-slider__slide-img" style="background-image: url('./images/event6.jpg')">
 
                                 </div>
                                 <div class="event-slider__slide-content">
                                     <div class="event-slider__slide-content-top">
                                         <div class="event-slider__slide-tag" style="background-color:red ">
-                                            tag name
+                                            США
                                         </div>
                                         <div class="event-slider__slide-date">
-                                            tag date
+                                            20 июл 1969 г.
                                         </div>
                                     </div>
                                     <div class="event-slider__slide-description">
-                                       desc
+                                        Нил А́рмстронг - первый человек, ступивший на Луну  в ходе лунной экспедиции корабля «Аполлон-11».
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="event-slider__slide swiper-slide">
-                                <div class="event-slider__slide-img" style="background-image: url('https://via.placeholder.com/300/FF0000/FFFFFF?Text=Down.com')">
+                                <div class="event-slider__slide-img" style="background-image: url('./images/event7.jpg')">
 
                                 </div>
                                 <div class="event-slider__slide-content">
                                     <div class="event-slider__slide-content-top">
                                         <div class="event-slider__slide-tag" style="background-color:red ">
-                                            tag name
+                                            США
                                         </div>
-                                        <div class="event-slider__slide-date">
-                                            tag date
-                                        </div>
+                                      
                                     </div>
                                     <div class="event-slider__slide-description">
-                                       desc
+                                        Starlink — спутниковая система, компанией SpaceX для обеспечения спутниковым доступом в Интернет
                                     </div>
                                 </div>
                             </div>
@@ -342,11 +321,11 @@
                     </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Афиша событий -->
     <!-- Блок с видео -->
         
-    <div class="video-block" id="video-block">
+    <div class="video-block wow1" id="video-block">
         <div class="container">
             <div class="video-block__wrapper">
                 <div class="video-block__content">
@@ -373,7 +352,7 @@
 
     <!-- Блок с кружками -->
         
-    <div class="block-our-astronauts" >
+    <div class="block-our-astronauts" id="our-astronauts">
   
         <div class="container">
             <div class="block-our-astronauts__top">
@@ -468,9 +447,261 @@
         </div>
     </div>
       <!-- Блок с кружками -->
+
+      <!-- Фотогалерея -->
+
+        <section class="photo-gallery">
+            <div class="container">
+                <div class="photo-gallery__title h1" id="photo-gallery">
+                    Фотогалерея
+                </div>
+            </div>
+                <div class="container">
+                    <div class="photo-gallery__wrapper">
+                        <div class="photo-gallery__arrows">
+                            <div class="photo-gallery__arrow-wrapper photo-gallery__arrow-wrapper--prev">
+                                <svg class="photo-gallery__arrow" width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.00604 11.2214L12.7898 19.5168C13.3823 20.0764 13.3823 20.986 12.7898 21.5454C12.1973 22.1049 11.2342 22.105 10.6417 21.5454L0.788422 12.2401C0.490636 11.9589 0.34485 11.5916 0.34485 11.2214C0.34485 10.8513 0.490732 10.484 0.788422 10.2028L10.6417 0.900338C11.2343 0.343661 12.1974 0.343661 12.7898 0.900338C13.3823 1.4599 13.3823 2.37229 12.7898 2.92897L4.00604 11.2214Z" fill="#245B8F" fill-opacity="0.2"></path>
+                                    </svg>
+                            </div>
+                            <div class="photo-gallery__arrow-wrapper photo-gallery__arrow-wrapper--next">
+                                <svg class="photo-gallery__arrow" width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.99408 11.2258L1.21031 2.93045C0.617792 2.37089 0.617792 1.4613 1.21031 0.901819C1.80282 0.342342 2.76596 0.342252 3.35838 0.901819L13.2117 10.2072C13.5095 10.4884 13.6553 10.8557 13.6553 11.2258C13.6553 11.596 13.5094 11.9632 13.2117 12.2445L3.35838 21.5469C2.76587 22.1036 1.80272 22.1036 1.21031 21.5469C0.617792 20.9874 0.617792 20.075 1.21031 19.5183L9.99408 11.2258Z" fill="#04A7B5"></path>
+                                    </svg>
+                            </div>
+                        </div>
+                      
+
+                    <div class="photo-gallery__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="photo-gallery__slide swiper-slide" data-src='./images/photo2.jpg' data-fancybox="gallery">
+                                <div class="photo-gallery__slide-image-wrapper">
+                                    <img src="./images/photo2.jpg" alt="">
+                                </div>
+                                <div class="photo-gallery__slide-name">
+                                    Меркурий
+                                </div>
+                            </div>
+                            <div class="photo-gallery__slide swiper-slide" data-src='./images/photo1.jpg' data-fancybox="gallery">
+                                <div class="photo-gallery__slide-image-wrapper">
+                                    <img src="./images/photo1.jpg" alt="">
+                                </div>
+                                <div class="photo-gallery__slide-name">
+                                   Марс
+                                </div>
+                            </div>
+                            <div class="photo-gallery__slide swiper-slide" data-src='./images/photo3.jpg' data-fancybox="gallery">
+                                <div class="photo-gallery__slide-image-wrapper">
+                                    <img src="./images/photo3.jpg" alt="">
+                                </div>
+                                <div class="photo-gallery__slide-name">
+                                   Венера
+                                </div>
+                            </div>
+                            <div class="photo-gallery__slide swiper-slide" data-src='./images/photo4.jpg' data-fancybox="gallery">
+                                <div class="photo-gallery__slide-image-wrapper">
+                                    <img src="./images/photo4.jpg" alt="">
+                                </div>
+                                <div class="photo-gallery__slide-name">
+                                    Юпитер
+                                </div>
+                            </div>
+                            <div class="photo-gallery__slide swiper-slide" data-src='./images/photo5.jpg' data-fancybox="gallery">
+                                <div class="photo-gallery__slide-image-wrapper">
+                                    <img src="./images/photo5.jpg" alt="">
+                                </div>
+                                <div class="photo-gallery__slide-name">
+                                    Сатурн
+                                </div>
+                            </div>
+                            <div class="photo-gallery__slide swiper-slide" data-src='./images/photo6.jpg' data-fancybox="gallery">
+                                <div class="photo-gallery__slide-image-wrapper">
+                                    <img src="./images/photo6.jpg" alt="">
+                                </div>
+                                <div class="photo-gallery__slide-name">
+                                    Уран
+                                </div>
+                            </div>
+                            <div class="photo-gallery__slide swiper-slide" data-src='./images/photo7.jpg' data-fancybox="gallery">
+                                <div class="photo-gallery__slide-image-wrapper">
+                                    <img src="./images/photo7.jpg" alt="">
+                                </div>
+                                <div class="photo-gallery__slide-name">
+                                    Нептун
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-gallery__slider-bullets">
         
+                        </div>
+                    </div>
+    
+            </div>
+                </div>
+                   
+            </section>
+      <!-- Фотогалерея -->
+    <!-- Блок с картой -->
+    <div class="block-our-astronauts block-our-astronauts--map" id="college">
+        <div class="container">
+            <div class="block-our-astronauts__title h1">
+                Донской колледж информационных технологий
+             </div>
+             <div id="map" class="map" ></div>
+        </div>  
+    </div>
+    <!-- Блок с картой -->
+    <!-- Вопросы -->
+            
+        <section class="questions" id="questions">
+            <div class="questions__wrapper">
+                <div class="container">
+                    <div class="questions__title h1">
+                        Вопросы
+                    </div>
+
+                    <div class="questions__items">
+                        <div class="questions__item">
+                            <div class="questions__item-title-wrapper">
+                                <div class="questions__item-title">
+                                    В какой день был первый полёт человека в космос?
+                                </div>
+
+                                <div class="questions__item-plus">
+
+                                </div>
+                            </div>
+
+                            <div class="questions__item-content">
+                                <div class="c-content">
+                                    12 апреля 1961 года советский космонавт Юрий Гагарин первым среди землян совершил полет в космос.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questions__item">
+                            <div class="questions__item-title-wrapper">
+                                <div class="questions__item-title">
+                                    Как звали первую женщину космонавта?
+                                </div>
+
+                                <div class="questions__item-plus">
+
+                                </div>
+                            </div>
+
+                            <div class="questions__item-content">
+                                <div class="c-content">
+                                    Валентина Владимировна Терешкова
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questions__item">
+                            <div class="questions__item-title-wrapper">
+                                <div class="questions__item-title">
+                                   Сколько планет в Солнечной системе?
+                                </div>
+
+                                <div class="questions__item-plus">
+
+                                </div>
+                            </div>
+
+                            <div class="questions__item-content">
+                                <div class="c-content">
+                                    Солнечной системе имеется восемь известных планет: Меркурий, Венера, Земля, Марс, Юпитер, Сатурн, Уран и Нептун.
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <div class="questions__item">
+                            <div class="questions__item-title-wrapper">
+                                <div class="questions__item-title">
+                                    Как звали первого человека на луне?
+                                </div>
+
+                                <div class="questions__item-plus">
+
+                                </div>
+                            </div>
+
+                            <div class="questions__item-content">
+                                <div class="c-content">
+                                    Нил А́рмстронг - первый человек, ступивший на Луну.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Вопросы -->
+     <!-- Подвал -->
+        <div class="footer">
+            <div class="container">
+                <div class="footer__noise">
+                </div>
+                <div class="footer__wrapper">
+                    <nav class="footer__menu">
+                       <a class="footer__menu-link" href="#banner">  Баннер</a>
+                       <a class="footer__menu-link" href="#event-slider"> Афиша событий</a>
+                       <a class="footer__menu-link" href="#video-block">  Видео</a>
+                       <a class="footer__menu-link" href="#our-astronauts"> Наши космонавты</a>
+                       <a class="footer__menu-link" href="#photo-gallery"> Фотогалерея</a>
+                       <a class="footer__menu-link" href="#college"> Колледж</a>
+                    </nav>
+                    <div class="footer__content">
+                        <div class="footer__block">
+                            <img class="footer__logo" src="./images/common/rocket.png" alt="">
+                            <div class="footer__description">
+                               Сайт на тему день космонавтики
+                            </div>
+                        </div>
+                        <div class="footer__block">
+                            <div class="footer__address">
+                                <div class="footer__block-title">
+                                    Адрес колледжа
+                                </div>
+                                <div class="footer__address-content">
+                                    ул. 30 Лет Победы, дом 4, Донской, Тульская обл.
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="footer__block">
+                            <div class="footer__address">
+                                <div class="footer__block-title">
+                                    Преподаватель
+                                </div>
+                                <div class="footer__address-content">
+                                    Суханова Дарья Ивановна
+                                </div>
+                                <a target="_blank" class="footer__block-link" href="https://suhanova.wixsite.com/dkit">
+                                    Сайт
+                                </a>
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="footer__politics">
+                        <div class="footer__block-title">
+                            Web-дизайн, разработка сайта — Маргарян Виталий.
+                           
+                        </div>
+                        <div class="footer__block-title">
+                            <a target="_blank" class="footer__politics-link" href="https://github.com/vitaly3000/">GITHUB</a>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Подвал -->
+      
     <script src="./libs/jquery/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="./libs/wow/wow.min.js"></script>
     <script type="module" src="./script.js"></script>
 </body>
 </html> 

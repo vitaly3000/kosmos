@@ -1,0 +1,15 @@
+
+$block-name: 'map';
+
+.#{$block-name} {
+	width: 100%;
+    height: 500px;
+    margin-top: 50px;
+
+    @include for-width('mobile3') {
+        margin-top: 100px;
+    }
+}
+.block-our-astronauts--map {
+    padding-bottom: 100px;
+}

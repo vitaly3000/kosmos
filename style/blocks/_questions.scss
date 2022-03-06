@@ -1,0 +1,113 @@
+
+$block-name: 'questions';
+
+.#{$block-name} {
+    
+	&__wrapper {
+        padding-top: 30px;
+		padding-bottom: 50px;
+
+		@include for-width('mobile3') {
+			background-color: $color-white;
+			padding-top: 64px;
+			padding-bottom: 100px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 53px;
+	}
+
+	&__items {
+		@include for-width('middle') {
+			margin: 0 -50px;
+		}
+	}
+
+	&__item {
+		margin-bottom: 10px;
+		box-shadow: 3px 4px 30px #f0f0f6;
+		border-radius: 20px;
+		cursor: pointer;
+		padding: 15px 20px;
+		transition: all 0.3s ease-in;
+		background-color: $color-white;
+
+		@include for-width('mobile3') {
+			padding: 20px 50px;
+		}
+
+		&.active {
+			box-shadow: none;
+			background: none;
+
+
+			.#{$block-name}__item-plus::before {
+				background: none;
+			}
+
+			.#{$block-name}__item-content {
+				display: block;
+                color: $color-turquoise;
+			}
+		}
+	}
+
+	&__item-title-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item-title {
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 24px;
+
+		@include for-width('mobile3') {
+			font-size: 22px;
+			line-height: 24px;
+		}
+	}
+
+	&__item-plus {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		margin-left: 10px;
+		overflow: hidden;
+        flex: 0 0 auto;
+
+		@include for-width('mobile3') {
+			height: 30px;
+			width: 30px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			height: 2px;
+			width: 30px;
+			border-radius: 5px;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: $color-turquoise;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 30px;
+			width: 2px;
+			border-radius: 5px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: $color-turquoise;
+		}
+	}
+
+	&__item-content {
+		display: none;
+        margin-top: 30px;
+	}
+}
