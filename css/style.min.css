@@ -248,7 +248,6 @@ html {
   
   .header--scroll .header__content-inner {
     height: 4rem;
-    overflow-x: hidden;
   }
   
   .header--scroll .header__menu-items {
