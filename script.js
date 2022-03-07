@@ -166,15 +166,9 @@ function checkScroll() {
       speed: 800,
       slidesPerView: 'auto',
       spaceBetween: 26,
-      breakpoints: {
-          // when window width is >= 540px
-          1200: {
-              slidesPerGroup: 2,
-          },
-          1600: {
-              slidesPerGroup: 3,
-          }
-      },
+      freeMode: true,
+      centerInsufficientSlides: true,
+    
       navigation: {
           nextEl: `.event-slider__arrow-next`,
           prevEl: `.event-slider__arrow-prev`,

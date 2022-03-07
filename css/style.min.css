@@ -1101,7 +1101,6 @@ html {
   @media (min-width: 860px) {
     .event-slider {
       flex-direction: row;
-      margin-right: -340px;
     }
   }
   
@@ -1196,6 +1195,11 @@ html {
     height: auto;
     padding-bottom: 30px;
     position: relative;
+  }
+  @media (min-width: 860px) {
+    .event-slider__slider {
+      width: calc(100% + 340px);
+    }
   }
   
   .event-slider__slide {
