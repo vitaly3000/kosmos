@@ -2069,23 +2069,7 @@ html {
   }
   
   .footer__address {
-    margin-bottom: 1.5rem;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  @media (min-width: 860px) {
-    .footer__address {
-      width: 50%;
-      flex-direction: column;
-    }
-  }
-  
-  @media (min-width: 1280px) {
-    .footer__address {
-      width: 100%;
-    }
+    max-width: 280px;
   }
   
   .footer__address-content {
